@@ -21,6 +21,9 @@ Aquí documento mi metodología para resolver incidentes reales y simulados:
 * **[INC-20260419-002] - Análisis de Campaña de Spam Masiva**
     * *Resumen:* Respuesta ante reportes de malware, identificación de campañas mediante Network Message ID y remediación masiva.
     * 👉 [Ver reporte](./Incident-Reports/Analisis-Spam-Campana.md)
+*  **[INC-20260420-003] - Inicios de Sesión Fallidos (Contraseña Vencida)**
+    * *Resumen:* Análisis de logs de error 50126 en Entra ID para identificar falsos positivos causados por políticas de expiración de contraseñas.
+    * 👉 [Ver reporte](./Incident-Reports/Login-Fallido-Contrasena-Vencida.md)
 
 ---
 
