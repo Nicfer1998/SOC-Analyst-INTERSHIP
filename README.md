@@ -12,18 +12,33 @@
 
 ---
 
-## 📁 Casos de Investigación (Incident Reports)
-Aquí documento mi metodología para resolver incidentes reales y simulados:
+## 📁 casos de investigación (incident reports)
+aquí documento mi metodología para resolver incidentes reales y simulados:
 
-* **[INC-20260418-001] - Phishing & Regla de Reenvío Sospechosa**
-    * *Resumen:* Investigación técnica sobre el robo de credenciales y descarte de movimiento lateral en Exchange Online.
-    * 👉 [Ver reporte](./Incident-Reports/Caso-Phishing.md)
-* **[INC-20260419-002] - Análisis de Campaña de Spam Masiva**
-    * *Resumen:* Respuesta ante reportes de malware, identificación de campañas mediante Network Message ID y remediación masiva.
-    * 👉 [Ver reporte](./Incident-Reports/Analisis-Spam-Campana.md)
-*  **[INC-20260420-003] - Inicios de Sesión Fallidos (Contraseña Vencida)**
-    * *Resumen:* Análisis de logs de error 50126 en Entra ID para identificar falsos positivos causados por políticas de expiración de contraseñas.
-    * 👉 [Ver reporte](./Incident-Reports/Login-Fallido-Contrasena-Vencida.md)
+* **[INC-20260418-001] - phishing & regla de reenvío sospechosa**
+    * *resumen:* investigación técnica sobre el robo de credenciales y descarte de movimiento lateral en exchange online.
+    * 👉 [ver reporte](./Incident-Reports/1-Caso-Phishing.md)
+* **[INC-20260419-002] - análisis de campaña de spam masiva**
+    * *resumen:* respuesta ante reportes de malware, identificación de campañas mediante network message id y remediación masiva.
+    * 👉 [ver reporte](./Incident-Reports/2-Analisis-Spam-Campana.md)
+* **[INC-20260420-003] - inicios de sesión fallidos (contraseña vencida)**
+    * *resumen:* análisis de logs de error 50126 en entra id para identificar falsos positivos causados por expiración.
+    * 👉 [ver reporte](./Incident-Reports/3-Login-Fallido-Contrasena-Vencida.md)
+* **[INC-20260421-004] - ubicación de inicio de sesión atípica (VPN)**
+    * *resumen:* validación de alertas geográficas mediante el análisis de asn para identificar nodos vpn.
+    * 👉 [ver reporte](./Incident-Reports/4-Acceso-inusual-Viaje-imposible.md)
+* **[INC-20260421-005] - detección de malware en herramientas administrativas**
+    * *resumen:* análisis de contexto y rol del usuario para identificar falsos positivos en herramientas de it.
+    * 👉 [ver reporte](./Incident-Reports/5-Deteccion-de-malware.md)
+* **[INC-20260421-006] - instalación de software no sancionado (shadow IT)**
+    * *resumen:* gestión de incidentes de cumplimiento y escalamiento ante restricciones de firewall.
+    * 👉 [ver reporte](./Incident-Reports/6-ShadowIT.md)
+* **[INC-20260421-007] - phishing con código de dispositivo y spoofing**
+    * *resumen:* investigación de técnicas de device code phishing y validación de spoofing en kql.
+    * 👉 [ver reporte](./Incident-Reports/7-Spoofing.md)
+* **[INC-20260421-008] - intentos de fuerza bruta distribuidos en active directory**
+    * *resumen:* hunting proactivo utilizando kql para identificar fallos de autenticación.
+    * 👉 [ver reporte](./Incident-Reports/8-Fuerza-Bruta.md)
 
 ---
 
