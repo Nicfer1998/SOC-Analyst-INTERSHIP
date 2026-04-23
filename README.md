@@ -39,6 +39,9 @@ aquí documento mi metodología para resolver incidentes reales y simulados:
 * **[INC-20260421-008] - intentos de fuerza bruta distribuidos en active directory**
     * *resumen:* hunting proactivo utilizando kql para identificar fallos de autenticación.
     * 👉 [ver reporte](./Incident-Reports/8-Fuerza-Bruta.md)
+* **[INC-20260422-009] - Detección de ransomware en actualización (Falso positivo)**
+    * *Resumen:* Análisis de alerta EDR (CryptoGuard) originada por el comportamiento de un paquete nativo de Windows Update, resuelto mediante validación de heurística e identificadores del proveedor.
+    * 👉 [Ver reporte](./Incident-Reports/9-Ransomware(CryptoGuard).md)
 
 ---
 
