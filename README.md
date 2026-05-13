@@ -42,6 +42,29 @@ aquí documento mi metodología para resolver incidentes reales y simulados:
 * **[INC-20260422-009] - Detección de ransomware en actualización (Falso positivo)**
     * *Resumen:* Análisis de alerta EDR (CryptoGuard) originada por el comportamiento de un paquete nativo de Windows Update, resuelto mediante validación de heurística e identificadores del proveedor.
     * 👉 [Ver reporte](./Incident-Reports/9-Ransomware(CryptoGuard).md)
+- **[INC-20260513-010] - Sophos PUA Cleanup Failed (Generic ML PUA)**
+  * *Resumen:* Detección de archivo ZIP legacy marcado por heurística ML de Sophos. Verificado como legítimo mediante historial de incidentes similares previos.
+  * 👉 [Ver reporte](https://github.com/Nicfer1998/SOC-Analyst-INTERSHIP/blob/main/Incident-Reports/10-Sophos-PUA-Cleanup.md)
+
+- **[INC-20260513-011] - Multistage Attack - Purview Role Assignment (Fusion)**
+  * *Resumen:* Alerta de Fusion por asignación de roles privilegiados fuera de PIM. Identificado como migración automática legítima de Microsoft Purview mediante análisis de logs.
+  * 👉 [Ver reporte](https://github.com/Nicfer1998/SOC-Analyst-INTERSHIP/blob/main/Incident-Reports/11-Fusion-Purview-RoleAssignment.md)
+
+- **[INC-20260513-012] - Local Admin Group Changes (False Positive)**
+  * *Resumen:* Modificación de grupo local en vaxx01. Verificados ambos usuarios en Azure AD como miembros legítimos del área de logística.
+  * 👉 [Ver reporte](https://github.com/Nicfer1998/SOC-Analyst-INTERSHIP/blob/main/Incident-Reports/12-LocalAdminGroup-Changes.md)
+
+- **[INC-20260513-013] - SAMR Reconnaissance desde ADCS**
+  * *Resumen:* Reconocimiento SAMR desde GPZ-CA01 hacia GPZ-DC01. Confirmado como tráfico legítimo del servidor ADCS consultando el Domain Controller.
+  * 👉 [Ver reporte](https://github.com/Nicfer1998/SOC-Analyst-INTERSHIP/blob/main/Incident-Reports/13-SAMR-Recon-ADCS.md)
+
+- **[INC-20260513-014] - vmnat.exe Suspicious Activity (False Positive)**
+  * *Resumen:* Proceso vmnat.exe con conexión saliente detectado como amenaza. Hash verificado contra binario oficial de VMware. Confirmado legítimo.
+  * 👉 [Ver reporte](https://github.com/Nicfer1998/SOC-Analyst-INTERSHIP/blob/main/Incident-Reports/14-vmnat-Suspicious-Activity.md)
+
+- **[INC-20260513-015] - NetSupport RAT via Malvertising (TRUE POSITIVE) 🔴**
+  * *Resumen:* Usuario descargó fake Dynamics365 desde anuncio malicioso de Google. Instalación de NetSupport RAT con persistencia via tarea programada y C2 activo. Equipo aislado y sesiones revocadas.
+  * 👉 [Ver reporte](https://github.com/Nicfer1998/SOC-Analyst-INTERSHIP/blob/main/Incident-Reports/15-NetSupport-RAT-Malvertising.md)
 
 ---
 
