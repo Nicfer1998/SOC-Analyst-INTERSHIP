@@ -12,76 +12,96 @@
 
 ---
 
-## 📁 casos de investigación (incident reports)
-aquí documento mi metodología para resolver incidentes reales:
+## 📁 Casos de Investigación (Incident Reports)
+Aquí documento mi metodología para resolver incidentes reales:
 
-* **[INC-20260418-001] - phishing & regla de reenvío sospechosa**
-    * *resumen:* investigación técnica sobre el robo de credenciales y descarte de movimiento lateral en exchange online.
-    * 👉 [ver reporte](./Incident-Reports/1-Caso-Phishing.md)
-      
-* **[INC-20260419-002] - análisis de campaña de spam masiva**
-    * *resumen:* respuesta ante reportes de malware, identificación de campañas mediante network message id y remediación masiva.
-    * 👉 [ver reporte](./Incident-Reports/2-Analisis-Spam-Campana.md)
-      
-* **[INC-20260420-003] - inicios de sesión fallidos (contraseña vencida)**
-    * *resumen:* análisis de logs de error 50126 en entra id para identificar falsos positivos causados por expiración.
-    * 👉 [ver reporte](./Incident-Reports/3-Login-Fallido-Contrasena-Vencida.md)
-      
-* **[INC-20260421-004] - ubicación de inicio de sesión atípica (VPN)**
-    * *resumen:* validación de alertas geográficas mediante el análisis de asn para identificar nodos vpn.
-    * 👉 [ver reporte](./Incident-Reports/4-Acceso-inusual-Viaje-imposible.md)
-      
-* **[INC-20260421-005] - detección de malware en herramientas administrativas**
-    * *resumen:* análisis de contexto y rol del usuario para identificar falsos positivos en herramientas de it.
-    * 👉 [ver reporte](./Incident-Reports/5-Deteccion-de-malware.md)
-      
-* **[INC-20260421-006] - instalación de software no sancionado (shadow IT)**
-    * *resumen:* gestión de incidentes de cumplimiento y escalamiento ante restricciones de firewall.
-    * 👉 [ver reporte](./Incident-Reports/6-ShadowIT.md)
-      
-* **[INC-20260421-007] - phishing con código de dispositivo y spoofing**
-    * *resumen:* investigación de técnicas de device code phishing y validación de spoofing en kql.
-    * 👉 [ver reporte](./Incident-Reports/7-Spoofing.md)
-      
-* **[INC-20260421-008] - intentos de fuerza bruta distribuidos en active directory**
-    * *resumen:* hunting proactivo utilizando kql para identificar fallos de autenticación.
-    * 👉 [ver reporte](./Incident-Reports/8-Fuerza-Bruta.md)
-      
-* **[INC-20260422-009] - Detección de ransomware en actualización (Falso positivo)**
+* **[INC-20260418-001] - Phishing & Regla de Reenvío Sospechosa**
+    * *Resumen:* Investigación técnica sobre el robo de credenciales y descarte de movimiento lateral en Exchange Online.
+    * 👉 [Ver reporte](./Incident-Reports/01-Caso-Phishing.md)
+
+* **[INC-20260419-002] - Análisis de Campaña de Spam Masiva**
+    * *Resumen:* Respuesta ante reportes de malware, identificación de campañas mediante Network Message ID y remediación masiva.
+    * 👉 [Ver reporte](./Incident-Reports/02-Analisis-Spam-Campana.md)
+
+* **[INC-20260420-003] - Inicios de Sesión Fallidos (Contraseña Vencida)**
+    * *Resumen:* Análisis de logs de error 50126 en Entra ID para identificar falsos positivos causados por expiración.
+    * 👉 [Ver reporte](./Incident-Reports/03-Login-Fallido-Contrasena-Vencida.md)
+
+* **[INC-20260421-004] - Ubicación de Inicio de Sesión Atípica (VPN)**
+    * *Resumen:* Validación de alertas geográficas mediante el análisis de ASN para identificar nodos VPN.
+    * 👉 [Ver reporte](./Incident-Reports/04-Acceso-inusual-Viaje-imposible.md)
+
+* **[INC-20260421-005] - Detección de Malware en Herramientas Administrativas**
+    * *Resumen:* Análisis de contexto y rol del usuario para identificar falsos positivos en herramientas de IT.
+    * 👉 [Ver reporte](./Incident-Reports/05-Deteccion-de-malware.md)
+
+* **[INC-20260421-006] - Instalación de Software No Sancionado (Shadow IT)**
+    * *Resumen:* Gestión de incidentes de cumplimiento y escalamiento ante restricciones de firewall.
+    * 👉 [Ver reporte](./Incident-Reports/06-ShadowIT.md)
+
+* **[INC-20260421-007] - Phishing con Código de Dispositivo y Spoofing**
+    * *Resumen:* Investigación de técnicas de Device Code Phishing y validación de spoofing en KQL.
+    * 👉 [Ver reporte](./Incident-Reports/07-Spoofing.md)
+
+* **[INC-20260421-008] - Intentos de Fuerza Bruta Distribuidos en Active Directory**
+    * *Resumen:* Hunting proactivo utilizando KQL para identificar fallos de autenticación.
+    * 👉 [Ver reporte](./Incident-Reports/08-Fuerza-Bruta.md)
+
+* **[INC-20260422-009] - Detección de Ransomware en Actualización (Falso Positivo)**
     * *Resumen:* Análisis de alerta EDR (CryptoGuard) originada por el comportamiento de un paquete nativo de Windows Update, resuelto mediante validación de heurística e identificadores del proveedor.
-    * 👉 [Ver reporte](./Incident-Reports/9-Ransomware(CryptoGuard).md)
-      
-- **[INC-20260513-010] - Sophos PUA Cleanup Failed (Generic ML PUA)**
-  * *Resumen:* Detección de archivo ZIP legacy marcado por heurística ML de Sophos. Verificado como legítimo mediante historial de incidentes similares previos.
-  * 👉 [Ver reporte](https://github.com/Nicfer1998/SOC-Analyst-INTERSHIP/blob/main/Incident-Reports/10-Sophos-PUA-Cleanup.md)
+    * 👉 [Ver reporte](./Incident-Reports/09-Ransomware(CryptoGuard).md)
 
-- **[INC-20260513-011] - Multistage Attack - Purview Role Assignment (Fusion)**
-  * *Resumen:* Alerta de Fusion por asignación de roles privilegiados fuera de PIM. Identificado como migración automática legítima de Microsoft Purview mediante análisis de logs.
-  * 👉 [Ver reporte](https://github.com/Nicfer1998/SOC-Analyst-INTERSHIP/blob/main/Incident-Reports/11-Fusion-Purview-RoleAssignment.md)
+* **[INC-20260513-010] - Sophos PUA Cleanup Failed (Generic ML PUA)**
+    * *Resumen:* Detección de archivo ZIP legacy marcado por heurística ML de Sophos. Verificado como legítimo mediante historial de incidentes similares previos.
+    * 👉 [Ver reporte](./Incident-Reports/10-Sophos-PUA-Cleanup.md)
 
-- **[INC-20260513-012] - Local Admin Group Changes (False Positive)**
-  * *Resumen:* Modificación de grupo local en vaxx01. Verificados ambos usuarios en Azure AD como miembros legítimos del área de logística.
-  * 👉 [Ver reporte](https://github.com/Nicfer1998/SOC-Analyst-INTERSHIP/blob/main/Incident-Reports/12-LocalAdminGroup-Changes.md)
+* **[INC-20260513-011] - Multistage Attack — Purview Role Assignment (Fusion)**
+    * *Resumen:* Alerta de Fusion por asignación de roles privilegiados fuera de PIM. Identificado como migración automática legítima de Microsoft Purview mediante análisis de logs.
+    * 👉 [Ver reporte](./Incident-Reports/11-Fusion-Purview-RoleAssignment.md)
 
-- **[INC-20260513-013] - SAMR Reconnaissance desde ADCS**
-  * *Resumen:* Reconocimiento SAMR desde GPZ-CA01 hacia GPZ-DC01. Confirmado como tráfico legítimo del servidor ADCS consultando el Domain Controller.
-  * 👉 [Ver reporte](https://github.com/Nicfer1998/SOC-Analyst-INTERSHIP/blob/main/Incident-Reports/13-SAMR-Recon-ADCS.md)
+* **[INC-20260513-012] - Local Admin Group Changes (False Positive)**
+    * *Resumen:* Modificación de grupo local en vaxx01. Verificados ambos usuarios en Azure AD como miembros legítimos del área de logística.
+    * 👉 [Ver reporte](./Incident-Reports/12-LocalAdminGroup-Changes.md)
 
-- **[INC-20260513-014] - vmnat.exe Suspicious Activity (False Positive)**
-  * *Resumen:* Proceso vmnat.exe con conexión saliente detectado como amenaza. Hash verificado contra binario oficial de VMware. Confirmado legítimo.
-  * 👉 [Ver reporte](https://github.com/Nicfer1998/SOC-Analyst-INTERSHIP/blob/main/Incident-Reports/14-vmnat-Suspicious-Activity.md)
+* **[INC-20260513-013] - SAMR Reconnaissance desde ADCS**
+    * *Resumen:* Reconocimiento SAMR desde GPZ-CA01 hacia GPZ-DC01. Confirmado como tráfico legítimo del servidor ADCS consultando el Domain Controller.
+    * 👉 [Ver reporte](./Incident-Reports/13-SAMR-Recon-ADCS.md)
 
-- **[INC-20260513-015] - NetSupport RAT via Malvertising (TRUE POSITIVE) 🔴**
-  * *Resumen:* Usuario descargó fake Dynamics365 desde anuncio malicioso de Google. Instalación de NetSupport RAT con persistencia via tarea programada y C2 activo. Equipo aislado y sesiones revocadas.
-  * 👉 [Ver reporte](https://github.com/Nicfer1998/SOC-Analyst-INTERSHIP/blob/main/Incident-Reports/15-NetSupport-RAT-Malvertising.md)
+* **[INC-20260513-014] - vmnat.exe Suspicious Activity (False Positive)**
+    * *Resumen:* Proceso vmnat.exe con conexión saliente detectado como amenaza. Hash verificado contra binario oficial de VMware. Confirmado legítimo.
+    * 👉 [Ver reporte](./Incident-Reports/14-vmnat-Suspicious-Activity.md)
 
-- **[INC-20260515-016] - Command and Control — Botnet IPs vs Servidor DMZ**
-  * *Resumen:* Dos IPs clasificadas como maliciosas en feeds de Threat Intelligence (ConfidenceScore 100 en MSTIC HoneyPot) contactaron servidor expuesto a internet. Tráfico de reconocimiento automatizado externo esperado para activos DMZ. Sin evidencia de compromiso.
-  * 👉 [Ver reporte](https://github.com/Nicfer1998/SOC-Analyst-INTERSHIP/blob/main/Incident-Reports/16-C2-BotnetIP-DMZ.md)
-    
-- **[INC-20260515-017] - User Assigned Privileged Role Involving Multiple Users**
-  * *Resumen:* Asignación manual del rol Authentication Administrator por Global Administrator sobre cuenta ya con múltiples roles privilegiados activos. Gestión administrativa legítima verificada mediante consulta de roles en Azure AD.
-  * 👉 [Ver reporte](https://github.com/Nicfer1998/SOC-Analyst-INTERSHIP/blob/main/Incident-Reports/17-Privileged-Role-Assignment-MultipleUsers.md)
+* **[INC-20260513-015] - NetSupport RAT via Malvertising (TRUE POSITIVE) 🔴**
+    * *Resumen:* Usuario descargó fake Dynamics365 desde anuncio malicioso de Google. Instalación de NetSupport RAT con persistencia via tarea programada y C2 activo. Equipo aislado y sesiones revocadas.
+    * 👉 [Ver reporte](./Incident-Reports/15-NetSupport-RAT-Malvertising.md)
+
+* **[INC-20260515-016] - Command and Control — Botnet IPs vs Servidor DMZ**
+    * *Resumen:* Dos IPs clasificadas como maliciosas en feeds de Threat Intelligence (ConfidenceScore 100 en MSTIC HoneyPot) contactaron servidor expuesto a internet. Tráfico de reconocimiento automatizado externo esperado para activos DMZ. Sin evidencia de compromiso.
+    * 👉 [Ver reporte](./Incident-Reports/16-C2-BotnetIP-DMZ.md)
+
+* **[INC-20260515-017] - User Assigned Privileged Role Involving Multiple Users**
+    * *Resumen:* Asignación manual del rol Authentication Administrator por Global Administrator sobre cuenta ya con múltiples roles privilegiados activos. Gestión administrativa legítima verificada mediante consulta de roles en Azure AD.
+    * 👉 [Ver reporte](./Incident-Reports/17-Privileged-Role-Assignment-MultipleUsers.md)
+
+* **[INC-20260519-018] - Local Admin Group Changes — Actividad Autorizada**
+    * *Resumen:* Usuario con múltiples grupos RWX y acceso VPN administrativo agregado manualmente a grupo local por cuenta built-in. Patrón repetido en incidentes recientes. Confirmado como actividad legítima del equipo de IT.
+    * 👉 [Ver reporte](./Incident-Reports/18-LocalAdminGroup-Changes-Authorized.md)
+
+* **[INC-20260519-019] - Multi-stage: Credential Access & Lateral Movement sobre Domain Controller**
+    * *Resumen:* Correlación de auth failures + RDP inusual sobre un Domain Controller con dos cuentas admin de alto privilegio. Actividad confirmada como legítima por los administradores del sistema.
+    * 👉 [Ver reporte](./Incident-Reports/19-MultiStage-CredAccess-LateralMovement.md)
+
+* **[INC-20260519-020] - Command and Control — Botnet IPs vs Dispositivo Internet Facing**
+    * *Resumen:* IPs de Botnet con ConfidenceScore 100 (MSTIC HoneyPot) contactaron host de la organización. Verificado en Microsoft Defender que el dispositivo está etiquetado como Internet Facing. Tráfico externo automatizado esperado. Sin evidencia de compromiso.
+    * 👉 [Ver reporte](./Incident-Reports/20-C2-BotnetIP-InternetFacing.md)
+
+* **[INC-20260519-021] - Unfamiliar Sign-in Properties — Aplicación de RRHH en Azure**
+    * *Resumen:* Login desde dispositivo no gestionado en Países Bajos (Azure NL) con deviceId vacío e isManaged false. Identificado como acceso generado por aplicación de Recursos Humanos hosteada en Azure. Patrón confirmado en múltiples usuarios. Propuesta de exclusión en regla analítica.
+    * 👉 [Ver reporte](./Incident-Reports/21-UnfamiliarSignin-HRApp.md)
+
+* **[INC-20260519-022] - Mail Redirect via ExO Transport Rule**
+    * *Resumen:* Regla de transporte en Exchange Online que copia correos entrantes hacia cuentas internas. Tácticas de Collection y Exfiltration identificadas por Sentinel. Confirmado como configuración administrativa intencional. BenignPositive — Suspicious but Expected.
+    * 👉 [Ver reporte](./Incident-Reports/22-MailRedirect-ExO-TransportRule.md)
 
 ---
 
@@ -104,6 +124,3 @@ aquí documento mi metodología para resolver incidentes reales:
 ## 👤 Información y Contacto
 * 📍 **Ubicación:** Córdoba, Argentina.
 * 🗣️ **Idiomas:** Español (Nativo) e Inglés (Nivel B1 - Intermedio). PROGRESO CONTINUO
-* 🔗 **Redes:** [LinkedIn](https://www.linkedin.com/in/nicfer1998) | [TryHackMe](https://tryhackme.com/p/nicfer1998) | [credly EMPRESARIAL](https://www.credly.com/users/nicfer1998/badges#credly) | [credly PERSONAL](https://www.credly.com/users/nicfer1998/badges#credly)
-* ✉️ **Email:** Jose.Nicolas.Fernandez@outlook.es
-
