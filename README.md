@@ -103,6 +103,22 @@ Aquí documento mi metodología para resolver incidentes reales:
     * *Resumen:* Regla de transporte en Exchange Online que copia correos entrantes hacia cuentas internas. Tácticas de Collection y Exfiltration identificadas por Sentinel. Confirmado como configuración administrativa intencional. BenignPositive — Suspicious but Expected.
     * 👉 [Ver reporte](./Incident-Reports/22-MailRedirect-ExO-TransportRule.md)
 
+* **[INC-20260520-023] - User Assigned Privileged Role Involving Multiple Users (MS-PIM)**
+    * *Resumen:* Dos cuentas recibieron el rol de Global Administrator vía MS-PIM en el mismo día. Verificado como proceso administrativo controlado mediante análisis de AuditLogs. Initiator confirmado como MS-PIM, indicando solicitud formal de activación de rol.
+    * 👉 [Ver reporte](./Incident-Reports/23-Asignacion-Rol-Privilegiado-MS-PIM.md)
+
+* **[INC-20260520-024] - Rare and Potentially High-Risk Office Operations (Exchange Automático)**
+    * *Resumen:* Operación Set-Mailbox sobre buzón de arbitraje ejecutada por NT SERVICE\MSExchangeAdminApiNetCore. Confirmado como mantenimiento automático interno de Exchange Online mediante análisis de AccountName, AppPoolName y OfficeTenantId. Sin intervención humana.
+    * 👉 [Ver reporte](./Incident-Reports/24-Operaciones-Office-Raras-Exchange-Automatico.md)
+
+* **[INC-20260520-025] - Suspicious OpenClaw Installation**
+    * *Resumen:* Instalación del agente de IA open-source OpenClaw detectada en dispositivo corporativo. Software con capacidad de acceder a datos, aplicaciones y sesiones del navegador. Confirmado como instalación intencional por el propio usuario con permisos habilitados.
+    * 👉 [Ver reporte](./Incident-Reports/25-Instalacion-Sospechosa-OpenClaw.md)
+
+* **[INC-20260520-026] - Changes to Application Ownership (Azure DevOps)**
+    * *Resumen:* Tres eventos simultáneos de cambio de ownership sobre aplicación registrada en Azure AD. Initiator identificado como Azure DevOps en flujo automático de CI/CD. Rol Application Developer del usuario confirmado como consistente con la acción. True Positive previo en incidente similar refuerza la importancia del monitoreo.
+    * 👉 [Ver reporte](./Incident-Reports/26-Cambio-Ownership-Aplicacion-DevOps.md)
+
 ---
 
 ## 🛠️ Habilidades Técnicas (Tech Stack)
