@@ -15,7 +15,7 @@ El 20 de mayo de 2026, Microsoft Sentinel generó un incidente de severidad alta
 | **Severidad** | **ALTA** |
 | **Categoría** | Persistence / Privilege Escalation |
 | **Detección Inicial** | Microsoft Sentinel — Threat Essentials: User Assigned Privileged Role |
-| **Cuentas involucradas** | [AZ-Tota] / [pulsar365] |
+| **Cuentas involucradas** | AZ-[username] / [username] |
 | **Rol asignado** | Global Administrator |
 | **Initiator** | MS-PIM |
 
@@ -41,7 +41,7 @@ Se ejecutó una consulta sobre `AuditLogs` filtrando por `Category == "RoleManag
 |---|---|
 | **OperationName** | Add member to role |
 | **RoleName** | Global Administrator |
-| **Target** | [pulsar365]@gpz.onmicrosoft.com |
+| **Target** | [username]@[org-domain] |
 | **Initiator** | MS-PIM |
 | **Result** | Success |
 | **Timestamp** | 2026-05-20T12:00:00Z |
@@ -52,15 +52,15 @@ Se ejecutó una consulta sobre `AuditLogs` filtrando por `Category == "RoleManag
 |---|---|
 | **OperationName** | Add member to role |
 | **RoleName** | Global Administrator |
-| **Target** | AZ-[Tota]@gpz.onmicrosoft.com |
+| **Target** | AZ-[username]@[org-domain] |
 | **Initiator** | MS-PIM |
 | **Result** | Success |
 | **Timestamp** | 2026-05-20T06:00:00Z |
 
 ### 3. Análisis de las Cuentas
 
-- **`AZ-[Tota]`:** El prefijo `AZ-` es una convención estándar de cuentas de administración dedicadas de Azure, separadas de la cuenta de usuario diaria. Su existencia indica que la organización sigue buenas prácticas de separación de cuentas administrativas.
-- **`[pulsar365]`:** Cuenta de servicio en el tenant `gpz.onmicrosoft.com`.
+- **`AZ-[username]`:** El prefijo `AZ-` es una convención estándar de cuentas de administración dedicadas de Azure, separadas de la cuenta de usuario diaria. Su existencia indica que la organización sigue buenas prácticas de separación de cuentas administrativas.
+- **`[username]`:** Cuenta de servicio en el tenant `[org-domain]`.
 - **Ambas iniciadas por MS-PIM:** Indica que hubo una solicitud formal de activación del rol, no una asignación directa manual sin control.
 
 ### 4. Validación
