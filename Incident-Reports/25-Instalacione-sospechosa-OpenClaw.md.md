@@ -74,7 +74,7 @@ Al tratarse de un dispositivo interno de la propia empresa donde se realiza la p
 
 - **Microsoft Sentinel** — Detección del incidente.
 - **Microsoft Defender XDR** — Contexto del dispositivo afectado.
-- **Portal ITSM (Relatech)** — Gestión y seguimiento del ticket.
+- **Portal ITSM [itsm-provider]** — Gestión y seguimiento del ticket.
 
 ---
 
