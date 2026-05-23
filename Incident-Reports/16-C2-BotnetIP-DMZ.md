@@ -15,7 +15,7 @@ El 15 de mayo de 2026, Microsoft Sentinel generó una alerta de severidad media 
 | **Categoría** | Falso positivo / Tráfico externo automatizado contra DMZ |
 | **Alert Product** | Microsoft Sentinel |
 | **Táctica MITRE** | T1071 — Application Layer Protocol (Command and Control) |
-| **IPs maliciosas** | `[REDACTED-IP-1]` / `[REDACTED-IP-2]` |
+| **IPs maliciosas** | `[IP-1]` / `[IP-2]` |
 | **Servidor afectado** | Servidor DMZ / Internet Facing |
 | **Clasificación final** | False Positive / Expected Activity |
 
