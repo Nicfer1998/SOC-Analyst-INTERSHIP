@@ -48,7 +48,7 @@ Se ejecutaron consultas KQL sobre `ThreatIntelligenceIndicator` para obtener el 
 | **ConfidenceScore** | 100/100 | 100/100 |
 | **Fuente** | MSTIC HoneyPot | MSTIC HoneyPot |
 | **Descripción** | Brute force attack | Brute force attack |
-| **DstIpAddr** | 172.17.100.191 | 172.17.100.191 |
+| **DstIpAddr** | [internal-host-ip] | [internal-host-ip] |
 
 - **Hallazgo:** Ambas IPs tienen **ConfidenceScore de 100**, capturadas por honeypots de Microsoft. Son actores activos de botnet que realizan ataques de fuerza bruta de forma masiva contra múltiples targets en Internet.
 
