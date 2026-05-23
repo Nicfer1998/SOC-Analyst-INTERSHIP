@@ -98,7 +98,7 @@ Se contactó al usuario para confirmar si reconocía el acceso.
 - **Microsoft Sentinel** — Detección de la alerta y gestión del incidente.
 - **Log Analytics (KQL)** — Consulta sobre `SigninLogs`.
 - **Azure Active Directory (Entra ID)** — Análisis del perfil del usuario.
-- **Portal ITSM (Relatech)** — Gestión y seguimiento del ticket.
+- **Portal ITSM [itsm-provider]** — Gestión y seguimiento del ticket.
 
 ---
 
