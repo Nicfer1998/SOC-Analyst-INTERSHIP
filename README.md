@@ -60,11 +60,11 @@ Aquí documento mi metodología para resolver incidentes reales:
     * 👉 [Ver reporte](./Incident-Reports/11-Fusion-Purview-RoleAssignment.md)
 
 * **[INC-20260513-012] - Local Admin Group Changes (False Positive)**
-    * *Resumen:* Modificación de grupo local en vaxx01. Verificados ambos usuarios en Azure AD como miembros legítimos del área de logística.
+    * *Resumen:* Modificación de grupo local en host corporativo. Verificados ambos usuarios en Azure AD como miembros legítimos del área correspondiente.
     * 👉 [Ver reporte](./Incident-Reports/12-LocalAdminGroup-Changes.md)
 
 * **[INC-20260513-013] - SAMR Reconnaissance desde ADCS**
-    * *Resumen:* Reconocimiento SAMR desde GPZ-CA01 hacia GPZ-DC01. Confirmado como tráfico legítimo del servidor ADCS consultando el Domain Controller.
+    * *Resumen:* Reconocimiento SAMR desde servidor ADCS hacia Domain Controller. Confirmado como tráfico legítimo del servidor de certificados consultando el DC.
     * 👉 [Ver reporte](./Incident-Reports/13-SAMR-Recon-ADCS.md)
 
 * **[INC-20260513-014] - vmnat.exe Suspicious Activity (False Positive)**
@@ -118,7 +118,18 @@ Aquí documento mi metodología para resolver incidentes reales:
 * **[INC-20260520-026] - Changes to Application Ownership (Azure DevOps)**
     * *Resumen:* Tres eventos simultáneos de cambio de ownership sobre aplicación registrada en Azure AD. Initiator identificado como Azure DevOps en flujo automático de CI/CD. Rol Application Developer del usuario confirmado como consistente con la acción. True Positive previo en incidente similar refuerza la importancia del monitoreo.
     * 👉 [Ver reporte](./Incident-Reports/26-Cambio-Ownership-Aplicacion-DevOps.md)
-   
+
+* **[INC-20260522-027] - Brute Force Attack on Active Directory**
+    * *Resumen:* 42 intentos de autenticación fallidos en menos de 4 minutos sobre una cuenta de dominio desde IP interna. Velocidad incompatible con acción humana — posible aplicación con credenciales vencidas. Cuenta bloqueada por política del dominio. Escalado a IT para identificar el proceso origen en el workstation afectado.
+    * 👉 [Ver reporte](./Incident-Reports/27-Brute-Force-Active-Directory.md)
+
+* **[INC-20260522-028] - Fusion: Possible Multistage Attack — VPN Corporativa**
+    * *Resumen:* Incidente Fusion High correlacionando Atypical Travel + Unfamiliar Sign-in + Potential Compromise sobre cuenta funcional mal clasificada como service account. IP sospechosa en Nueva York identificada como VPN corporativa mediante verificación de múltiples usuarios autenticándose desde la misma IP. Falso positivo por VPN no registrada como Named Location en Azure AD.
+    * 👉 [Ver reporte](./Incident-Reports/28-Fusion-Multistage-VPN-Corporativa.md)
+
+* **[INC-20260522-029] - Malicious Network Traffic Blocked — C2/Generic-A (En Investigación)**
+    * *Resumen:* Dispositivo interno desconocido intentó comunicarse con servidor C2/Generic-A en 6 ocasiones entre 01:42 y 06:12 AM. Tráfico bloqueado por firewall Sophos. Dispositivo sin agente Sophos, sin registro DNS y fuera del dominio — posible móvil personal infectado conectado al WiFi corporativo. Escalado a IT para identificación via DHCP lease history.
+    * 👉 [Ver reporte](./Incident-Reports/29-Malicious-Traffic-C2-Sophos-Bloqueado.md)
 
 ---
 
