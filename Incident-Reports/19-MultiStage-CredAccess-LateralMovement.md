@@ -16,7 +16,7 @@ El 19 de mayo de 2026, Microsoft Sentinel generó un incidente de severidad medi
 | **Categoría** | Credential Access / Lateral Movement |
 | **Detección Inicial** | Microsoft Sentinel — Multi-stage incident |
 | **Host afectado** | [DC-hostname] (Domain Controller) |
-| **IP involucrada** | 192.168.18.14 |
+| **IP involucrada** | [internal-ip] |
 | **Cuentas involucradas** | EU\[admin-account-1] / EU\[admin-account-2] |
 
 ---
