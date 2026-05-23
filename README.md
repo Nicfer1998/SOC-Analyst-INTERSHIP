@@ -119,17 +119,6 @@ Aquí documento mi metodología para resolver incidentes reales:
     * *Resumen:* Tres eventos simultáneos de cambio de ownership sobre aplicación registrada en Azure AD. Initiator identificado como Azure DevOps en flujo automático de CI/CD. Rol Application Developer del usuario confirmado como consistente con la acción. True Positive previo en incidente similar refuerza la importancia del monitoreo.
     * 👉 [Ver reporte](./Incident-Reports/26-Cambio-Ownership-Aplicacion-DevOps.md)
    
- * **[INC-20260522-027] - Brute Force Attack on Active Directory**
-    * *Resumen:* 42 intentos de autenticación fallidos en menos de 4 minutos sobre la cuenta DONGNOCCHI\ibonora desde IP interna. Velocidad incompatible con acción humana — posible aplicación con credenciales vencidas. Cuenta bloqueada por política del dominio. Escalado a IT para identificar el proceso origen en SDC-FIREFDG02.
-    * 👉 [Ver reporte](./Incident-Reports/27-Brute-Force-Active-Directory.md)
-
-* **[INC-20260522-028] - Fusion: Possible Multistage Attack — VPN Corporativa**
-    * *Resumen:* Incidente Fusion High correlacionando Atypical Travel + Unfamiliar Sign-in + Potential Compromise sobre cuenta funcional forms.service@venchi.com. IP sospechosa de Nueva York (98.116.199.102) identificada como VPN corporativa de Venchi mediante verificación de múltiples usuarios autenticándose desde la misma IP. Falso positivo por VPN no registrada como Named Location en Azure AD.
-    * 👉 [Ver reporte](./Incident-Reports/28-Fusion-Multistage-VPN-Corporativa.md)
-
-* **[INC-20260522-029] - Malicious Network Traffic Blocked — C2/Generic-A (En Investigación)**
-    * *Resumen:* Dispositivo interno desconocido (10.1.22.17) intentó comunicarse con servidor C2/Generic-A en 6 ocasiones entre 01:42 y 06:12 AM. Tráfico bloqueado por firewall Sophos. Dispositivo sin agente Sophos, sin registro DNS y fuera del dominio — posible móvil personal infectado conectado al WiFi corporativo. Escalado a IT para identificación via DHCP lease history.
-    * 👉 [Ver reporte](./Incident-Reports/29-Malicious-Traffic-C2-Sophos-Bloqueado.md)
 
 ---
 
