@@ -18,7 +18,7 @@ Durante una sesión de threat hunting, se detectaron múltiples intentos de inic
 ## 🛠 Proceso de investigación
 1. **Ejecución de threat hunting (kql):** se ejecutó una consulta personalizada sobre la tabla `SecurityEvent` para monitorear el evento 4625. la consulta incluyó una función de parseo (`case`) para traducir los subestados hexadecimales de windows a razones de fallo legibles por humanos.
 2. **Análisis de resultados:** los logs revelaron múltiples fallos con el motivo "Unknown user name or bad password". 
-3. **Evaluación de contexto de red:** se verificó que las direcciones IP de origen (`192.168.12.22`, `192.168.90.225`, etc.) pertenecían a la red interna (LAN). además, el `LogonTypeName` fue identificado como `3 - Network` usando el protocolo `NTLM`.
+3. **Evaluación de contexto de red:** se verificó que las direcciones IP de origen (`[internal-ip]`, `[internal-ip]`, etc.) pertenecían a la red interna (LAN). además, el `LogonTypeName` fue identificado como `3 - Network` usando el protocolo `NTLM`.
 4. **Hipótesis confirmada:** el patrón de una cuenta de administrador fallando por red desde múltiples IPs internas simultáneamente es el comportamiento clásico de un servicio, tarea programada o unidad de red mapeada que intenta autenticarse usando una contraseña antigua que ya fue rotada.
 
 ---
