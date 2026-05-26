@@ -131,6 +131,17 @@ Aquí documento mi metodología para resolver incidentes reales:
     * *Resumen:* Dispositivo interno desconocido intentó comunicarse con servidor C2/Generic-A en 6 ocasiones entre 01:42 y 06:12 AM. Tráfico bloqueado por firewall Sophos. Dispositivo sin agente Sophos, sin registro DNS y fuera del dominio — posible móvil personal infectado conectado al WiFi corporativo. Escalado a IT para identificación via DHCP lease history.
     * 👉 [Ver reporte](./Incident-Reports/29-Malicious-Traffic-C2-Sophos-Bloqueado.md)
 
+* **[INC-20260526-030] - Fusion: Possible Multistage Attack — Credenciales Comprometidas**
+    * *Resumen:* Incidente Fusion High correlacionando Atypical Travel + Unfamiliar Sign-in + Potential Compromise. IP de Ucrania con un único usuario intentó autenticarse con credenciales válidas — bloqueado por MFA (Error 50074). IP corporativa verificada con 234 usuarios distintos. Credenciales comprometidas confirmadas. Sesiones revocadas y contraseña forzada desde Microsoft Defender.
+    * 👉 [Ver reporte](./Incident-Reports/30-Fusion-Multistage-Credenciales-Comprometidas.md)
+
+* **[INC-20260526-031] - Nueva Credencial Agregada a Aplicación — Integración SSO Keycloak**
+    * *Resumen:* Global Administrator agregó credencial de tipo Password (Keycloak) a aplicación IAM corporativa para configurar integración SSO. IP conocida del administrador, UserAgent real y cuenta administrativa dedicada confirmaron actividad legítima. Técnica idéntica a App Consent Abuse pero con contexto administrativo verificado.
+    * 👉 [Ver reporte](./Incident-Reports/31-Nueva-Credencial-Aplicacion-SSO-Keycloak.md)
+
+* **[INC-20260526-032] - Cuenta Creada desde Fuente No Aprobada — Azure AD Connect**
+    * *Resumen:* Cuenta creada automáticamente por el proceso de sincronización Azure AD Connect (ConnectSyncProvisioning). Verificado directamente en AuditLogs del portal del cliente — campo "Initiated by" de Type: Application sin intervención humana. Los intentos fallidos previos corresponden al comportamiento normal del ciclo de sincronización.
+    * 👉 [Ver reporte](./Incident-Reports/32-Cuenta-Creada-ADConnect-Sincronizacion.md)
 ---
 
 ## 🛠️ Habilidades Técnicas (Tech Stack)
