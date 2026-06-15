@@ -142,6 +142,23 @@ Aquí documento mi metodología para resolver incidentes reales:
 * **[INC-20260526-032] - Cuenta Creada desde Fuente No Aprobada — Azure AD Connect**
     * *Resumen:* Cuenta creada automáticamente por el proceso de sincronización Azure AD Connect (ConnectSyncProvisioning). Verificado directamente en AuditLogs del portal del cliente — campo "Initiated by" de Type: Application sin intervención humana. Los intentos fallidos previos corresponden al comportamiento normal del ciclo de sincronización.
     * 👉 [Ver reporte](./Incident-Reports/32-Cuenta-Creada-ADConnect-Sincronizacion.md)
+
+* **[INC-20260423-033] - Hands-On Keyboard Attack: Intento de Ransomware Detenido por Attack Disruption 🔴**
+    * *Resumen:* Ataque humano-operado sobre Domain Controller y servidor de backups Veeam. Atacante usó credenciales comprometidas de cuenta Domain Admin para intentar volcar LSASS (5 intentos), deshabilitar Defender (13 intentos), descargar el payload Ceprolad via certutil y comprometer el servidor de backups. Attack Disruption de Defender XDR contuvo automáticamente la cuenta a la 01:03 AM — ransomware nunca ejecutado. Análisis forense completo documentado.
+    * 👉 [Ver reporte](./Incident-Reports/33-Hands-On-Keyboard-Ransomware-Attack-Disruption.md)
+
+* **[INC-20260526-034] - Privileged Accounts Sign-in Failure Spikes — Token Expirado en Outlook Mobile**
+    * *Resumen:* Picos de fallos de autenticación en cuenta con roles Dynamics 365 Administrator y Power Platform Administrator. Investigación de IPs reveló proxy corporativo (actividad normal de múltiples usuarios) e IP personal de iPhone del usuario. Causa raíz: error 70043 — refresh token invalidado por política de Conditional Access sign-in frequency. Usuario necesita reautenticarse en Outlook Mobile.
+    * 👉 [Ver reporte](./Incident-Reports/34-Privileged-Accounts-Sign-in-Failure-Spikes-Token-Expirado.md)
+
+* **[INC-20260609-035] - Primera Credencial Agregada a Aplicación — Sophos VPN SSO**
+    * *Resumen:* Alerta por adición de primera credencial (secret tipo Password) a aplicación Sophos VPN SSO en Azure AD. IP de origen con 604 eventos previos del mismo administrador — IP habitual de trabajo. Solo 2 fallos de credenciales (50126) ocurridos antes del evento y no relacionados. Cuentas de prueba test.vpn.sso y testvpn en la misma IP confirman configuración planificada de integración VPN. Confirmado por equipo IT del cliente.
+    * 👉 [Ver reporte](./Incident-Reports/35-First-Credential-Added-Application-Sophos-VPN-SSO.md)
+
+* **[INC-20260609-036] - Anonymous IP Address — Actividad de Usuario Confirmada como Normal**
+    * *Resumen:* Dos alertas por acceso desde IP clasificada como hosting/anónima (176.126.83.26 — Oneprovider, Arezzo, Italia). Solo el usuario afectado accede desde esa IP — descarta proxy corporativo. Resultados de autenticación predominantemente exitosos (0 — Success). Caso derivado al cliente para confirmación: usuario verificó que la actividad es normal y la IP corresponde a su conectividad habitual en la zona de Cosenza, Italia.
+    * 👉 [Ver reporte](./Incident-Reports/36-Anonymous-IP-Address-Actividad-Confirmada-Normal.md)
+
 ---
 
 ## 🛠️ Habilidades Técnicas (Tech Stack)
