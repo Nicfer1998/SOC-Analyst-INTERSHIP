@@ -17,9 +17,9 @@ Sentinel generó dos alertas relacionadas con el acceso de un usuario desde una 
 | **Primera actividad** | Jun 9, 2026 — 10:33 AM |
 | **Última actividad** | Jun 9, 2026 — 11:04 AM |
 | **Usuario afectado** | `[username]@[org-domain]` |
-| **IP sospechosa** | `176.126.83.26` |
+| **IP sospechosa** | `xxx.xxx.xx.xx` |
 | **Aplicación** | One Outlook Web |
-| **Ubicación declarada** | IT, Cosenza, Rose |
+| **Ubicación declarada** | IT |
 | **Fuente de detección** | Microsoft Sentinel / Microsoft Entra ID Protection |
 
 ---
@@ -35,13 +35,13 @@ Sentinel generó dos alertas relacionadas con el acceso de un usuario desde una 
 
 ---
 
-### 2. Análisis de la IP sospechosa (176.126.83.26)
+### 2. Análisis de la IP sospechosa (xxx.xxx.xx.xx)
 
 Consulta en IPinfo.io:
 
 | Campo | Valor |
 |---|---|
-| **Location** | Arezzo, Tuscany, Italia |
+| **Location** |  Italia |
 | **ASN** | AS136258 — BrainStorm Network, Inc |
 | **Company** | Oneprovider.com - Florence Infrastructure |
 | **AS Type** | Hosting |
@@ -56,7 +56,7 @@ La IP está clasificada como Privacy: true y AS Type: Hosting — esto explica p
 
 ```kql
 SigninLogs
-| where IPAddress == "176.126.83.26"
+| where IPAddress == "xxx.xxx.xx.xx"
 | where TimeGenerated > ago(7d)
 | summarize count() by UserPrincipalName
 | order by count_ desc
