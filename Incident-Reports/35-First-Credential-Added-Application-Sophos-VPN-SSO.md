@@ -16,7 +16,7 @@ Sentinel generó una alerta al detectar que se agregó la primera credencial (se
 | **Severidad** | High |
 | **Fecha/Hora** | Jun 9, 2026 — 08:14 AM |
 | **Usuario** | `[admin-user]@[org-domain]` |
-| **IP origen** | `[corp-ip]` (95.232.146.191) |
+| **IP origen** | `[corp-ip]` (xx.xxx.xxx.xxx) |
 | **Aplicación afectada** | Sophos VPN SSO |
 | **App ID** | `[app-id]` |
 | **Tipo de credencial** | Password (secret) |
@@ -40,7 +40,7 @@ Agregar una credencial a una aplicación donde no había ninguna es una señal d
 Datos iniciales relevantes:
 - La aplicación es **Sophos VPN SSO** — aplicación de autenticación de VPN corporativa
 - El usuario que realizó la acción: `[admin-user]@[org-domain]`
-- IP de origen: `95.232.146.191`
+- IP de origen: `xx.xxx.xxx.xxx`
 
 ---
 
@@ -48,7 +48,7 @@ Datos iniciales relevantes:
 
 ```kql
 SigninLogs
-| where IPAddress == "95.232.146.191"
+| where IPAddress == "xx.xxx.xxx.xxx"
 | summarize count() by UserPrincipalName
 | order by count_ desc
 ```
@@ -63,7 +63,7 @@ SigninLogs
 
 ```kql
 SigninLogs
-| where IPAddress == "95.232.146.191"
+| where IPAddress == "xx.xxx.xxx.xxx"
 | where UserPrincipalName == "[admin-user]@[org-domain]"
 | summarize count() by Result
 ```
